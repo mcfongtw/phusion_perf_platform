@@ -1,0 +1,3 @@
+# vagrant related
+.vagrant/
+*.log
