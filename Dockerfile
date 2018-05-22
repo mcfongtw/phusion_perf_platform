@@ -1,5 +1,7 @@
-# TODO : Move to another repo and rebuild docker build automation
 #
+# Existing Tags:
+# mcfongtw/ubuntu_perf_tools:latest
+# mcfongtw/ubuntu_perf_tools:16.04
 #
 FROM phusion/baseimage:master
 
@@ -115,9 +117,9 @@ RUN sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/ss
 ########################################################
 # Setup entry point
 
-COPY docker-entrypoint.sh /docker-entrypoint.sh
+COPY docker-entrypoint.sh /workspace/docker-entrypoint.sh
 
-ENTRYPOINT ["/docker-entrypoint.sh"]
+ENTRYPOINT ["/workspace/docker-entrypoint.sh"]
 
 ########################################################
 # Clean up APT when done.
