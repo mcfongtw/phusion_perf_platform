@@ -48,9 +48,12 @@ RUN apt-get install -y linux-headers-`uname -r`
 
 #######################################################
 # perf related
-
+#
 RUN apt-get install -y linux-tools-common linux-tools-generic linux-tools-`uname -r`
-
+#
+# Set permission to collect perf stat
+# -1 - Not paranoid at all
+RUN echo 'kernel.perf_event_paranoid = -1' > /etc/sysctl.d/perf.conf
 ##########################################
 # Systemtap related
 
@@ -118,6 +121,9 @@ RUN sed -i 's/PasswordAuthentication no/PasswordAuthentication yes/' /etc/ssh/ss
 # Setup entry point
 
 COPY docker-entrypoint.sh /workspace/docker-entrypoint.sh
+
+# standard_init_linux.go:190: exec user process caused "exec format error"
+RUN chmod +x /workspace/docker-entrypoint.sh
 
 ENTRYPOINT ["/workspace/docker-entrypoint.sh"]
 

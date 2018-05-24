@@ -1,5 +1,8 @@
-# vim: filetype=sh
 #!/bin/bash
+# 
+# XXX: /bin/bash need to be on the first line to avoid exec format error 
+# vim: filetype=sh
+#
 
 function on_error() {
   local frame=0
