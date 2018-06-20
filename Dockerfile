@@ -90,7 +90,7 @@ COPY stap-scripts/* /workspace/stap-scripts/
 
 #######################################################
 # Sysbench related
-RUN apt-get install sysbench
+RUN apt-get install -y sysbench
 #######################################################
 # Misc utilities
 RUN apt-get install -y vim git unzip tar wget curl cmake
