@@ -89,6 +89,9 @@ RUN mkdir -p stap-scripts/
 COPY stap-scripts/* /workspace/stap-scripts/
 
 #######################################################
+# Sysbench related
+RUN apt-get install sysbench
+#######################################################
 # Misc utilities
 RUN apt-get install -y vim git unzip tar wget curl cmake
 
