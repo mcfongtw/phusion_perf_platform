@@ -12,6 +12,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   		perftool.vm.provider "docker" do |docker|
 			docker.build_dir = "."
 			docker.force_host_vm = true
+			docker.pull = true
     			docker.vagrant_machine = "#{DOCKER_HOST_NAME}"
     			docker.vagrant_vagrantfile = "#{DOCKER_HOST_VAGRANTFILE}"
 			docker.has_ssh = false
