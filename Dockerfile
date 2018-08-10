@@ -1,7 +1,7 @@
 #
 # Existing Tags:
-# mcfongtw/ubuntu_perf_tools:latest
-# mcfongtw/ubuntu_perf_tools:16.04
+# mcfongtw/phusion_perf_platform:latest
+# mcfongtw/phusion_perf_platform:16.04
 #
 FROM phusion/baseimage:master
 
