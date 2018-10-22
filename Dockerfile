@@ -3,7 +3,7 @@
 # mcfongtw/phusion_perf_platform:latest
 # mcfongtw/phusion_perf_platform:16.04
 #
-FROM phusion/baseimage:master
+FROM phusion/baseimage:0.10.2
 
 MAINTAINER Michael Fong <mcfong.open@gmail.com>
 ########################################################

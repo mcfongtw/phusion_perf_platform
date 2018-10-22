@@ -1,12 +1,12 @@
 version: '3'
 
 services:
-  build_ubuntu_perf_tools_1604:
+  build_phusion_perf_platform_1604:
     build:
       context: ./
-    image: mcfongtw/ubuntu_perf_tools:16.04
+    image: mcfongtw/phusion_perf_platform:16.04
   demo:
-    image: mcfongtw/ubuntu_perf_tools:16.04
+    image: mcfongtw/phusion_perf_platform:16.04
     privileged: true
     volumes:
       # To retrieve symbols correctly from host side
