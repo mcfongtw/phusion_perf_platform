@@ -99,6 +99,14 @@ RUN apt-get install -y vim git unzip tar wget curl cmake
 # FlameGraph
 RUN git clone --depth=1 https://github.com/brendangregg/FlameGraph /workspace/FlameGraph
 
+#######################################################
+# PerfTools
+RUN git clone --depth=1 https://github.com/brendangregg/perf-tools.git /workspace/perf-tools
+
+#######################################################
+# BPF Compiler Collection (BCC)
+RUN git clone --depth=1 https://github.com/iovisor/bcc.git /workspace/bcc
+
 ########################################################
 # SSH Setting
 #
