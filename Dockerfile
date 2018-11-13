@@ -107,6 +107,17 @@ RUN git clone --depth=1 https://github.com/brendangregg/perf-tools.git /workspac
 # BPF Compiler Collection (BCC)
 RUN git clone --depth=1 https://github.com/iovisor/bcc.git /workspace/bcc
 
+#######################################################
+# Page Cache stat: get page cache stats for files on Linux
+RUN git clone --depth=1 https://github.com/tobert/pcstat.git /workspace/pcstat
+
+#######################################################
+# Portable file system cache diagnostics and control 
+RUN git clone --depth=1 https://github.com/hoytech/vmtouch.git /workspace/vmtouch
+RUN cd /workspace/vmtouch
+RUN make
+RUN make install
+
 ########################################################
 # SSH Setting
 #
