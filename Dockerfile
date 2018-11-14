@@ -114,9 +114,9 @@ RUN git clone --depth=1 https://github.com/tobert/pcstat.git /workspace/pcstat
 #######################################################
 # Portable file system cache diagnostics and control 
 RUN git clone --depth=1 https://github.com/hoytech/vmtouch.git /workspace/vmtouch
-RUN cd /workspace/vmtouch
-RUN make
-RUN make install
+RUN cd /workspace/vmtouch && \
+	make && \
+	make install;
 
 ########################################################
 # SSH Setting
